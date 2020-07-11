@@ -1,2 +1,14 @@
-<header></header>
+<header>
+  {{title}} {{myTest1}}
+  <a href="#" routerLink="">Каталог</a>
+  <a href="#" routerLink="about">Оплата</a>
+  <a href="#" routerLink="else">Доставка</a>
+  <a href="#" routerLink="else">Контакты</a>
+  <a href="#" routerLink="else">Корзина</a>
+  {{myTest}}
+
+  <button type="button" (click)="onMyClick">Click me</button>
+</header>
+
+<app-catalog [test] = "myTest" ></app-catalog>
 <router-outlet></router-outlet>

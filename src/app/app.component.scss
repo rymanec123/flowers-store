@@ -1,4 +1,17 @@
 header {
   border: 1px solid;
-  padding: 30px;
+  padding: 20px;
+  text-align: center;
+  a {
+    border: 1px solid;
+    padding: 15px;
+    font-size: 25px;
+    margin: 10px;
+    color: blueviolet;
+    display: inline-block;
+
+    & + a {
+      margin-left: 15px;
+    }
+  }
 }
