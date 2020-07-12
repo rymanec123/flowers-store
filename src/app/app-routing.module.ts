@@ -12,6 +12,7 @@ const routes: Routes = [
     pathMatch: 'full',
     component: CatalogComponent
   },
+
   {
     path: 'cart',
     component: CartComponent

@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {ReactiveFormsModule} from "@angular/forms";
+import {RouterModule} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
@@ -20,7 +22,13 @@ import { DeliveryComponent } from './components/delivery/delivery.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      // { path: '', component: ProductListComponent },
+      { path: 'products/:productId', component: CatalogComponent },
+      { path: 'cart', component: CartComponent },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

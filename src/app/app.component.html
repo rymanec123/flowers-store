@@ -1,14 +1,16 @@
 <header>
   {{title}} {{myTest1}}
   <a href="#" routerLink="">Каталог</a>
-  <a href="#" routerLink="about">Оплата</a>
-  <a href="#" routerLink="else">Доставка</a>
-  <a href="#" routerLink="else">Контакты</a>
-  <a href="#" routerLink="else">Корзина</a>
+  <a href="#" routerLink="payment">Оплата</a>
+  <a href="#" routerLink="delivery">Доставка</a>
+  <a href="#" routerLink="contacts">Контакты</a>
+  <a href="#" routerLink="cart">Корзина</a>
   {{myTest}}
 
-  <button type="button" (click)="onMyClick">Click me</button>
 </header>
+<body>
+<button type="button" (click)="onMyClick">Купить</button>
+</body>
 
-<app-catalog [test] = "myTest" ></app-catalog>
+<!--<app-catalog [test] = "myTest" ></app-catalog>-->
 <router-outlet></router-outlet>
