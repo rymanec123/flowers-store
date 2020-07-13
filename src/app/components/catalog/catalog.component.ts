@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, Input, OnDestroy, OnInit, Output, EventEmitter} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-// import { products } from '../products';
-import {CartService} from "../../cart.service";
+import { products } from './catalog.mock';
+import {CartService} from '../../cart.service';
 
 @Component({
   selector: 'app-catalog',
@@ -12,6 +12,7 @@ import {CartService} from "../../cart.service";
 export class CatalogComponent implements OnInit, OnDestroy, AfterViewInit {
   @Input() test: string;
   @Output() test1 = new EventEmitter<number>();
+  myProducts = products
 
   constructor(
     private route: ActivatedRoute,
