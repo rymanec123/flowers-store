@@ -5,28 +5,30 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CatalogComponent } from './components/catalog/catalog.component';
 import { CartComponent } from './components/cart/cart.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { DeliveryComponent } from './components/delivery/delivery.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CatalogComponent,
     CartComponent,
     PaymentComponent,
     ContactsComponent,
-    DeliveryComponent
+    DeliveryComponent,
+    ProductListComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      // { path: '', component: ProductListComponent },
-      { path: 'products/:productId', component: CatalogComponent },
+      { path: '', component: ProductListComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
     ])
   ],
