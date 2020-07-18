@@ -11,11 +11,12 @@ import { CartService} from "../cart.service";
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
-  myProducts = products
+  myProducts = products;
+  product = null;
 
   constructor(
     private route: ActivatedRoute,
-    private cartService: CartService
+    private cartService: CartService,
   ) { }
 
   addToCart(product) {
@@ -25,7 +26,7 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-       // this.product = products[+params.get('productId')];
+        this.product = products[+params.get('productId')];
     });
   }
 

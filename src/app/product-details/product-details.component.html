@@ -1,6 +1,6 @@
 <h2>Product Details</h2>
 
-<div *ngFor="let product of myProducts; index as productId">
+<!--<div *ngFor="let product of myProducts; index as productId">-->
 <div *ngIf="myProducts">
   <h3>{{ product.name }}</h3>
   <h4>{{ product.price | currency }}</h4>
@@ -8,5 +8,5 @@
 
   <button (click)="addToCart(product)">Buy</button>
   </div>
-</div>
+<!--</div>-->
 
