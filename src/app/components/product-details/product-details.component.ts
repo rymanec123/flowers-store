@@ -3,12 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { products } from '@app/shared/mocks';
 import { CartService} from '@app/services/cart/cart.service';
-
-interface ProductDefinition {
-  name: string;
-  price: number;
-  description: string;
-  img: string;}
+import { ProductDefinition } from '@app/shared/interfaces/product/product'
 
 @Component({
   selector: 'app-product-details',
