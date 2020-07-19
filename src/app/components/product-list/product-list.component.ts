@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, Input, OnDestroy, OnInit, Output, EventEmitter} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { products } from '@app/shared/mocks/catalog.mock';
+import {ProductDefinition} from "@app/shared/interfaces";
 
 @Component({
   selector: 'app-product-list',
@@ -9,16 +10,14 @@ import { products } from '@app/shared/mocks/catalog.mock';
 })
 
 export class ProductListComponent implements OnInit, OnDestroy, AfterViewInit {
-  @Input() test: string;
-  @Output() test1 = new EventEmitter<number>();
-  myProducts = products
+  myProducts: ProductDefinition[] = products;
+  product: ProductDefinition = null;
 
   constructor(
     private route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
-    this.test1.emit(5);
     console.log('Компонет Каталог создался');
   }
 
