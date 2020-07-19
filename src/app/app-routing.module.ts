@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ProductListComponent} from './components/product-list/product-list.component';
-import {CartComponent} from './components/cart/cart.component';
-import {ContactsComponent} from './components/contacts/contacts.component';
-import {DeliveryComponent} from './components/delivery/delivery.component';
-import {PaymentComponent} from "./components/payment/payment.component";
-import {ProductDetailsComponent} from "./product-details/product-details.component";
+import {ProductListComponent} from '@app/components/product-list/product-list.component';
+import {CartComponent} from '@app/components/cart/cart.component';
+import {ContactsComponent} from '@app/components/contacts/contacts.component';
+import {DeliveryComponent} from '@app/components/delivery/delivery.component';
+import {PaymentComponent} from '@app/components/payment/payment.component';
+import {ProductDetailsComponent} from '@app/components/product-details/product-details.component';
+import {FormComponent} from '@app/components/form/form.component';
 
 const routes: Routes = [
   {
@@ -15,9 +16,13 @@ const routes: Routes = [
   },
 
   {
-    path: '',
-    pathMatch: 'full',
+    path: 'products/:productId',
     component: ProductDetailsComponent
+  },
+
+  {
+    path: 'form',
+    component: FormComponent
   },
 
   {

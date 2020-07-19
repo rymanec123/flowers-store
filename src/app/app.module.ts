@@ -2,17 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
-import {ReactiveFormsModule} from "@angular/forms";
-import {RouterModule} from "@angular/router";
+import {ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CartComponent } from './components/cart/cart.component';
-import { PaymentComponent } from './components/payment/payment.component';
-import { ContactsComponent } from './components/contacts/contacts.component';
-import { DeliveryComponent } from './components/delivery/delivery.component';
-import { ProductListComponent } from './components/product-list/product-list.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { FormComponent } from './components/form/form.component';
+import { CartComponent } from '@app/components/cart/cart.component';
+import { PaymentComponent } from '@app/components/payment/payment.component';
+import { ContactsComponent } from '@app/components/contacts/contacts.component';
+import { DeliveryComponent } from '@app/components/delivery/delivery.component';
+import { ProductListComponent } from '@app/components/product-list/product-list.component';
+import { ProductDetailsComponent } from '@app/components/product-details/product-details.component';
+import { FormComponent } from '@app/components/form/form.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -30,12 +31,8 @@ import { FormComponent } from './components/form/form.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent },
-      { path: 'cart', component: CartComponent },
-      { path: 'form', component: FormComponent },
-    ])
+    MatFormFieldModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, Input, OnDestroy, OnInit, Output, EventEmitter} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { products } from './catalog.mock';
+import { products } from '@app/shared/mocks/catalog.mock';
 
 @Component({
   selector: 'app-product-list',
@@ -16,10 +16,6 @@ export class ProductListComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(
     private route: ActivatedRoute,
   ) { }
-
-  share() {
-    window.alert('The product has been shared!');
-  }
 
   ngOnInit(): void {
     this.test1.emit(5);

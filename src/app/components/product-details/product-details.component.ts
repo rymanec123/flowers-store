@@ -1,9 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { products} from "../components/product-list/catalog.mock";
-import { CartService} from "../cart.service";
+import { products } from '@app/shared/mocks';
+import { CartService} from '@app/services/cart/cart.service';
 
+interface ProductDefinition {
+  name: string;
+  price: number;
+  description: string;
+  img: string;}
 
 @Component({
   selector: 'app-product-details',
@@ -11,8 +16,8 @@ import { CartService} from "../cart.service";
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
-  myProducts = products;
-  product = null;
+  myProducts: ProductDefinition[] = products;
+  product: ProductDefinition = null;
 
   constructor(
     private route: ActivatedRoute,
