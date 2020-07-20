@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, Injectable, OnDestroy, OnInit} from '@angular/core';
-import {CartService} from '../../cart.service';
+import {CartService} from '@app/services/cart/cart.service';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
