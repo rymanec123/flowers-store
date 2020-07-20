@@ -20,7 +20,7 @@ export class ProductDetailsComponent implements OnInit {
   ) { }
 
   addToCart(product) {
-    window.alert('Your product has been added to the cart!');
+    window.alert('Ваш продукт добавлен в корзину!');
     this.cartService.addToCart(product);
   }
 
