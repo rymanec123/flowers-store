@@ -1,1 +1,27 @@
+body {
+
+}
+.mkdf-grid {
+  width: 300px;
+  margin: 0 auto;
+}
+
+h1 {
+  justify-content: center;
+  font-family: Lora,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+form {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid olivedrab;
+  background-color: lightseagreen;
+
+  label {
+    color: antiquewhite;
+  }
+}
+
 
