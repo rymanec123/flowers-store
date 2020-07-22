@@ -1,43 +1,67 @@
-<p>form works!</p>
-<form
-  action="#"
-  name="signin"
-  class="f-default"
-  [formGroup]="signInForm"
-  (submit)="onSignInSubmit($event)"
->
+<body>
+  <div class = "container">
+  <form
+    action="#"
+    name="signin"
+    class="f-default"
+    [formGroup]="signInForm"
+    (submit)="onSignInSubmit($event)"
+  >
 
+    <mat-form-field class="f-default__row">
+      <mat-label>Telephone</mat-label>
+      <input
+        type="text"
+        name="telephone"
+        formControlName="telephone"
+        placeholder="Ваш телефон"
+        matInput
+      >
+    </mat-form-field>
 
-  <mat-form-field class="f-default__row">
-    <mat-label>Login</mat-label>
-    <input
-      type="text"
-      name="login"
-      formControlName="login"
-      placeholder="Login"
-      matInput
-    >
-  </mat-form-field>
+    <mat-form-field class="f-default__row">
+      <mat-label>Login</mat-label>
+      <input
+        type="text"
+        name="login"
+        formControlName="login"
+        placeholder="Ваш login"
+        matInput
+      >
+    </mat-form-field>
 
-  <mat-form-field class="f-default__row">
-    <mat-label>Password</mat-label>
-    <input
-      type="password"
-      name="pass"
-      formControlName="pass"
-      placeholder="Password"
-      matInput
-    >
-  </mat-form-field>
+    <mat-form-field class="f-default__row">
+      <mat-label>email</mat-label>
+      <input
+        type="email"
+        name="email"
+        formControlName="email"
+        placeholder="Ваш email"
+        matInput
+      >
+    </mat-form-field>
 
-  <div class="f-default__actions">
-    <button
-      type="submit"
-      class="f-default__btn"
-      mat-raised-button
-      color="primary"
-    >
-      Sign in
-    </button>
+    <mat-form-field class="f-default__row">
+      <mat-label>Рassword</mat-label>
+      <input
+        type="password"
+        name="pass"
+        formControlName="pass"
+        placeholder="Ваш пароль"
+        matInput
+      >
+    </mat-form-field>
+
+    <div class="f-default__actions">
+      <button
+        type="submit"
+        class="f-default__btn"
+        mat-raised-button
+        color="primary"
+      >
+        Зарегистрироваться
+      </button>
+    </div>
+  </form>
   </div>
-</form>
+</body>

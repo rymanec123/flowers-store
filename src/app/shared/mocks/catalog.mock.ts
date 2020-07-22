@@ -1,38 +1,38 @@
 export const products = [
   {
-    name: 'Rose',
+    name: 'Розы',
     price: 79,
-    description: 'Red rose',
-    img: 'qwerqer'
+    description: 'Букет из розовых роз',
+    img: 'assets/blog-post-1-300x300.jpg'
   },
   {
     name: 'Tulip',
     price: 69,
     description: 'yellow Tulip',
-    img: 'qwerqer'
+    img: 'assets/blog-post-1-550x550.jpg'
   },
   {
     name: 'Lily',
     price: 29,
     description: 'White Lily',
-    img: 'qwerqer'
+    img: 'assets/roses-194110_640.jpg'
   },
   {
     name: 'Rose',
     price: 99,
     description: 'Blue rose',
-    img: 'qwerqer'
+    img: 'assets/roses-194110_640.jpg'
   },
   {
     name: 'Tulip',
     price: 68,
     description: 'black Tulip',
-    img: 'qwerqer'
+    img: 'assets/roses-194110_640.jpg'
   },
   {
     name: 'Lily',
     price: 33,
     description: 'green Lily',
-    img: 'qwerqer'
+    img: 'assets/roses-194110_640.jpg'
   }
 ];

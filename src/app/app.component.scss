@@ -2,13 +2,18 @@ header {
   border: 1px solid;
   padding: 20px;
   text-align: center;
+  background-image: url("roses-194110_640.jpg");
+  background-size: cover;
+  height:450px;
   a {
     border: 1px solid;
+    border-radius: 50%;
     padding: 15px;
     font-size: 25px;
     margin: 10px;
     color: blueviolet;
     display: inline-block;
+    text-decoration: none;
 
     & + a {
       margin-left: 15px;
@@ -16,5 +21,18 @@ header {
   }
 }
 .AppComponent {
+  title {
+    font-size: 150px;
+  }
   color: red;
+}
+title {
+  color: coral;
+}
+body{
+  background-image: url("271.jpg");
+}
+
+img{
+  max-width: 100%;
 }

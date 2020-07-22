@@ -1,7 +1,28 @@
-.f-default {
-  max-width: 300px;
+*{box-sizing: border-box;}
+html, body{
+  margin: 0;
+}
+
+body {
+  height: auto;
+  padding: 50px;
+  font-family: sans-serif;
+
+}
+
+.container{
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 50px;
+  font-size: 17px;
+  background-image: url("271.jpg");
+  background-size: cover;
+  height:650px;
+}
+.f-default {
+  max-width: 450px;
+  margin-left: 650px;
+  padding: 45px;
   border: 1px solid;
 
   &__row {

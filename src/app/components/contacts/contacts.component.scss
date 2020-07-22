@@ -1,14 +1,17 @@
 *{box-sizing: border-box;}
 html, body{
   margin: 0;
+  background-image: url("~assets/h2-background-team.jpg");
+  background-size: cover;
 }
 .description{
   border: 1px solid;
   padding: 25px;
   font-size: 20px;
-  margin: 50px 500px;
+  margin: 50px 300px;
   background-color: blanchedalmond;
   display: inline-block;
+  width: 870px;
 }
 h1 {
   color: green;
