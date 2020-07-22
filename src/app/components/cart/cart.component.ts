@@ -42,6 +42,4 @@ export class CartComponent implements OnInit, OnDestroy, AfterViewInit {
   ngAfterViewInit() {
     console.log('Компонет Корзина  удалился');
   }
-
 }
-

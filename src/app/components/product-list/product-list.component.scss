@@ -1,0 +1,23 @@
+h2 {
+  font-style: oblique;
+  font-size: 60px;
+  color: coral;
+}
+.children {
+  flex-basis: 33.3333%;
+  padding: 5px 15px;
+}
+
+.parent {
+  font-size: 0;
+  margin: 0 -15px;
+}
+.parent >.children {
+  display: inline-block;
+  width: 25%;
+  padding: 0 15px;
+}
+
+li {
+  list-style: none;
+}

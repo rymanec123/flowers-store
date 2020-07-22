@@ -1,8 +1,30 @@
-.f-default {
-  max-width: 300px;
+*{box-sizing: border-box;}
+html, body{
+  margin: 0;
+}
+
+body {
+  height: auto;
+  padding: 50px;
+  font-family: sans-serif;
+  background-image: url("~assets/h2-gallery-img-1.jpg");
+  background-size: cover;
+  }
+
+.container{
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 50px;
+  font-size: 17px;
+  height:650px;
+}
+.f-default {
+  max-width: 420px;
+  margin-left: 600px;
+  padding: 45px;
   border: 1px solid;
+  background-image: url("~assets/h2-background-team-768x440.jpg");
+  background-size: contain;
 
   &__row {
     width: 100%;

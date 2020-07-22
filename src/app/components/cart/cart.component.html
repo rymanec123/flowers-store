@@ -1,9 +1,9 @@
-<div class = "mkdf-grid">
-  <h1 >Cart</h1>
-</div>
-<img itemprop="image" src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/shop-title-img.jpg" alt="f">
+<header></header>
+<body>
+<div class = "container">
+
 <p>
-  <a routerLink="/shipping">Стоимость доставки</a>
+  <a routerLink="/shipping">Ваш заказ</a>
 </p>
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }} </span>
@@ -12,15 +12,18 @@
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
   <div>
-    <label>ИМЯ</label>
-    <input type="text" formControlName="name">
+    <label class="label">Заказчик</label>
+    <input class="input" type="text" formControlName="name" placeholder="Ваше имя">
+    <input class="input" type="text" formControlName="name" placeholder="Ваш телефон">
   </div>
 
   <div>
-    <label>АДРЕС</label>
-    <input type="text" formControlName="address">
+    <label class="label">Адрес доставки</label>
+    <input class="input" type="text" formControlName="address" placeholder="Ваш адрес">
   </div>
 
   <button class="button" type="submit">Покупка</button>
 
 </form>
+</div>
+</body>
