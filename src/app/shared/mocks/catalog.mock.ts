@@ -16,7 +16,7 @@ export const products = [
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci.' +
       ' Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ' +
       'Vestibulum ultricies aliquam donec quam.',
-    img: 'assets/shop-img-4.jpg'
+    img: 'assets/shop-img-4.jpg',
   },
 
   {

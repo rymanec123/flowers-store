@@ -1,24 +1,8 @@
-<!-- <header>
-  <img src="logo.png" alt="img" class="img">
-  {{title}} {{takingOrders}}
-  <a href="#" routerLink="">Каталог</a>
-  <a href="#" routerLink="payment">Оплата</a>
-  <a href="#" routerLink="delivery">Доставка</a>
-  <a href="#" routerLink="contacts">Контакты</a>
-  <a href="#" routerLink="cart">Корзина</a>
-  <a href="#" routerLink="form">Регистрация</a>
-  {{myTelephone}}
-  <div class="titleI">
-    <span>Добро пожаловать</span>
-  </div>
-  <div class="title">
-    <span>Доставка цветов</span>
-  </div>
-</header> -->
 <section>
   <header>
-     <!-- {{title}} {{takingOrders}}
-     {{myTelephone}} -->
+<!--    <img src="assets/logo-1.png" alt="img" class="img">-->
+<!--    <img itemprop="image" class="mkdf-light-logo" src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/03/logo-header.png" width="214" height="86" alt="light logo">-->
+
     <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/03/logo-header.png" alt="logo">
     <nav class="header__item-nav">
       <ul class="l-navigator">
@@ -27,11 +11,14 @@
         <li class="l-navigator__item"><a class="l-navigator__link" href="#" routerLink="delivery">Доставка</a></li>
         <li class="l-navigator__item"><a class="l-navigator__link" href="#" routerLink="contacts">Контакты</a></li>
         <li class="l-navigator__item"><a class="l-navigator__link" href="#" routerLink="cart">Корзина</a></li>
+        <li class="l-navigator__item"><a class="l-navigator__link" href="#" routerLink="form">Регистрация</a></li>
       </ul>
     </nav>
+    <h1>{{takingOrders}}</h1><h1>{{myTelephone}} </h1>
   </header>
   </section>
 <router-outlet></router-outlet>
+
 <footer>
   <a href="#" routerLink="">Каталог</a>
   <a href="#" routerLink="payment">Оплата</a>
