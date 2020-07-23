@@ -2,6 +2,8 @@
 html, body{
   margin: 0;
   background-image: url("~assets/h1-img-2.png");
+
+
   background-size: contain;
 }
 
@@ -45,11 +47,13 @@ form {
     font-size: 20px;
     margin: 25px;
     padding: 10px;
+    border: 1px solid olivedrab;
   }
   .button {
     color: green;
     font-size: 25px;
     padding: 10px;
+    border: 1px solid olivedrab;
   }
 }
 .f-default {
