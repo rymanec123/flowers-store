@@ -1,4 +1,5 @@
-<h2>КАТАЛОГ</h2>
+<body>
+<div class="container">
 
 <ul classs="parent">
   <li class="children" *ngFor="let product of myProducts; index as productId" >
@@ -9,12 +10,15 @@
       </a>
     </h3>
 
-    <p *ngIf="product.description">
-      Description: {{ product.description }}
-    </p>
+    <h4 *ngIf="product.price">
+      Price: {{ product.price | currency }}
+    </h4>
+
     <p *ngIf="product.img">
       <img src="{{product.img}}">
     </p>
 
   </li>
 </ul>
+</div>
+</body>

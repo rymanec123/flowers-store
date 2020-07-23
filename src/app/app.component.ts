@@ -16,7 +16,6 @@ import {
   ]
 })
 export class AppComponent {
-  title = 'FLOWERS-STORE';
   myTelephone:  string = 'Наши телефоны: +375-29-999-99-99'  ;
   takingOrders: string =  'Прием заказов: пн-пт 9:00- 21:00';
 }
