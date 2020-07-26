@@ -1,3 +1,23 @@
+@import 'abstracts/mixins';
+
+@include tablet() {
+  .parent >.children{
+    width: 50%;
+  }
+  .parent li:nth-child(n+2){
+    margin-top: 30px;
+  }
+}
+
+@include mobile() {
+  .parent > .children {
+    width: 100%;
+  }
+  .parent li:nth-child(n+1) {
+    margin-top: 30px;
+  }
+}
+
 *{box-sizing: border-box;}
 
 body {

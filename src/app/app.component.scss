@@ -61,19 +61,12 @@ a {
   .parent li:nth-child(n+2){
     margin-top: 30px;
   }
-  .img-two{
-    max-width: none;
-  }
 }
-@media screen and (max-width:740px){
-  .parent >.children{
+@media screen and (max-width:740px) {
+  .parent > .children {
     width: 100%;
   }
-  .parent li:nth-child(n+1){
+  .parent li:nth-child(n+1) {
     margin-top: 30px;
-  }
-
-  .img-two{
-    max-width: none;
   }
 }
