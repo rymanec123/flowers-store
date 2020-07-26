@@ -1,0 +1,44 @@
+[
+    {
+        "id": "e5cd98f40f15c1a72a0deac420d62f8274f7e0c6",
+        "name": "Розы",
+        "price": 79,
+        "description": "Букет из розовых роз",
+        "img": "assets/blog-post-1-300x300.jpg"
+    },
+    {
+        "id": "e5cd98f40f15c1a72a0deac420d62f8274f7e0c6",
+        "name": "Tulip",
+        "price": 69,
+        "description": "yellow Tulip",
+        "img": "assets/blog-post-1-550x550.jpg"
+    },
+    {
+        "id": "e5cd98f40f15c1a72a0deac420d62f8274f7e0c6",
+        "name": "Lily",
+        "price": 29,
+        "description": "White Lily",
+        "img": "assets/roses-194110_640.jpg"
+    },
+    {
+        "id": "e5cd98f40f15c1a72a0deac420d62f8274f7e0c6",
+        "name": "Rose",
+        "price": 99,
+        "description": "Blue rose",
+        "img": "assets/roses-194110_640.jpg"
+    },
+    {
+        "id": "e5cd98f40f15c1a72a0deac420d62f8274f7e0c6",
+        "name": "Tulip",
+        "price": 68,
+        "description": "black Tulip",
+        "img": "assets/roses-194110_640.jpg"
+    },
+    {
+        "id": "e5cd98f40f15c1a72a0deac420d62f8274f7e0c6",
+        "name": "Lily",
+        "price": 33,
+        "description": "green Lily",
+        "img": "assets/roses-194110_640.jpg"
+    }
+]
