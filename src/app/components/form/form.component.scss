@@ -1,3 +1,23 @@
+@import 'src/scss/abstracts/mixins';
+
+@include tablet() {
+  .parent >.children{
+    width: 50%;
+  }
+  .parent li:nth-child(n+2){
+    margin-top: 30px;
+  }
+}
+
+@include mobile() {
+  .parent > .children {
+    width: 100%;
+  }
+  .parent li:nth-child(n+1) {
+    margin-top: 30px;
+  }
+}
+
 *{box-sizing: border-box;}
 html, body{
   margin: 0;
@@ -7,7 +27,9 @@ body {
   height: auto;
   padding: 50px;
   font-family: sans-serif;
-  background-image: url("~assets/h2-gallery-img-1.jpg");
+  background-image: url("~assets/h2-background-img-1-600x600.jpg");
+  //background-image: url("~assets/h1-parallax-img-2.jpg");
+  //background-image: url("~assets/roses-194110_640.jpg");
   background-size: cover;
   }
 
@@ -19,7 +41,7 @@ body {
   height:650px;
 }
 .f-default {
-  max-width: 420px;
+  max-width: 400px;
   margin-left: 600px;
   padding: 45px;
   border: 1px solid;
@@ -28,6 +50,7 @@ body {
 
   &__row {
     width: 100%;
+    border: 1px solid olivedrab;
 
     & + & {
       margin-top: 20px;
@@ -36,6 +59,7 @@ body {
 
   &__actions {
     margin-top: 20px;
-    text-align: right;
+    text-align: center;
+    border: 1px solid olivedrab;
   }
 }

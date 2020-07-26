@@ -1,0 +1,65 @@
+@import 'src/scss/abstracts/mixins';
+
+@include tablet() {
+  .parent >.children{
+    width: 50%;
+  }
+  .parent li:nth-child(n+2){
+    margin-top: 30px;
+  }
+}
+
+@include mobile() {
+  .parent > .children {
+    width: 100%;
+  }
+  .parent li:nth-child(n+1) {
+    margin-top: 30px;
+  }
+}
+
+*{box-sizing: border-box;}
+
+body {
+  font-family: "Open Sans",sans-serif;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 17px;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background-image: url("~assets/roses-194110_640.jpg");
+  background-size: cover;
+  height: 600px;
+}
+
+img {
+  height: 600px;
+  width: 600px;
+}
+
+h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+h3 {
+  font-size: 25px;
+}
+h4 {
+  font-size: 20px;
+}
+button {
+  font-size: 20px;
+  padding: 15px;
+  border: 1px solid;
+}
