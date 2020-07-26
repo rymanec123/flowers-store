@@ -1,4 +1,4 @@
-@import 'abstracts/mixins';
+@import 'src/scss/abstracts/mixins';
 
 @include tablet() {
   .parent >.children{
