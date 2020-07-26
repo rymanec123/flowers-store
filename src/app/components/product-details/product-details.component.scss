@@ -1,29 +1,21 @@
 @import 'src/scss/abstracts/mixins';
 
 @include tablet() {
-  .parent >.children{
+  .l-products >.l-products__item{
     width: 50%;
   }
-  .parent li:nth-child(n+2){
+  .l-products li:nth-child(n+2){
     margin-top: 30px;
   }
 }
 
 @include mobile() {
-  .parent > .children {
+  .l-products > .l-products__item {
     width: 100%;
   }
-  .parent li:nth-child(n+1) {
+  .l-products li:nth-child(n+1) {
     margin-top: 30px;
   }
-}
-
-*{box-sizing: border-box;}
-
-body {
-  font-family: "Open Sans",sans-serif;
-  line-height: 26px;
-  font-weight: 400;
 }
 
 .container{

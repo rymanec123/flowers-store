@@ -1,43 +1,30 @@
 @import 'src/scss/abstracts/mixins';
 
 @include tablet() {
-  .parent >.children{
+  .l-products >.l-products__item{
     width: 50%;
   }
-  .parent li:nth-child(n+2){
+  .l-products li:nth-child(n+2){
     margin-top: 30px;
   }
 }
 
 @include mobile() {
-  .parent > .children {
+  .l-products > .l-products__item {
     width: 100%;
   }
-  .parent li:nth-child(n+1) {
+  .l-products li:nth-child(n+1) {
     margin-top: 30px;
   }
 }
 
-*{box-sizing: border-box;}
-html, body{
-  margin: 0;
-}
-
-body {
-  height: auto;
-  padding: 50px;
-  font-family: sans-serif;
-  //background-image: url("~assets/h1-parallax-img-2.jpg");
-  //background-image: url("~assets/roses-194110_640.jpg");
-  background-size: cover;
-  }
-
 .container{
-  max-width: 1500px;
   margin: 0 auto;
   padding: 50px;
   font-size: 17px;
   height:650px;
+  background-image: url("~assets/h3-img-4.jpg");
+  background-size: cover;
 }
 .f-default {
   max-width: 400px;

@@ -1,4 +1,3 @@
-<body>
   <div class="container">
   <ul>
     <li *ngIf="myProducts">
@@ -6,13 +5,9 @@
       <h3>{{ product.price | currency }}</h3>
       <h4>{{ product.description }}</h4>
       <p>{{ product.text }}</p>
-<!--      <h4>{{ product.additional }}</h4>-->
-<!--      <h4>{{ product.weight }}</h4>-->
-<!--      <h4>{{ product.dimentions }}</h4>-->
         <img src="{{product.img}}">
 
       <button (click)="addToCart(product)" title="Buy">Купить</button>
     </li>
   </ul>
 </div>
-</body>

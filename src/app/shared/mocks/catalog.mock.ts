@@ -3,9 +3,9 @@ export const products = [
     name: 'RUSTIC LOVE',
     price: 69,
     description: 'DESCRIPTION ',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci.' +
-      ' Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ' +
-      'Vestibulum ultricies aliquam donec quam.',
+    //"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci." +
+   //   " Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. " +
+   //   "Vestibulum ultricies aliquam donec quam.",
     img: 'assets/shop-img-2.jpg'
   },
 
@@ -13,9 +13,9 @@ export const products = [
     name: 'WHITE PETALS',
     price: 112,
     description: 'DESCRIPTION ',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci.' +
-      ' Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ' +
-      'Vestibulum ultricies aliquam donec quam.',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci.Cum ' +
+      'sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Vestibulum ultricies aliquam ' +
+      'donec quam.',
     img: 'assets/shop-img-4.jpg',
   },
 
@@ -180,5 +180,26 @@ export const products = [
       ' Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ' +
       'Vestibulum ultricies aliquam donec quam.',
     img: 'assets/shop-img-1-800x550.jpg'
-  }
+  },
+
+  {
+    name: 'WHITE PETALS',
+    price: 112,
+    description: 'DESCRIPTION ',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci.' +
+      ' Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ' +
+      'Vestibulum ultricies aliquam donec quam.',
+    img: 'assets/shop-img-4.jpg',
+  },
+
+  {
+    name: 'PASTEL ROSE',
+    price: 25,
+    description: 'DESCRIPTION ',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci.' +
+      ' Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ' +
+      'Vestibulum ultricies aliquam donec quam.',
+    img: 'assets/shop-img-5.jpg'
+  },
+
 ];
