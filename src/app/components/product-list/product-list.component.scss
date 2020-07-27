@@ -29,11 +29,21 @@
 .l-products {
   font-size: 0;
   margin: 0 -15px;
-}
-
-.l-products__item {
-  flex-basis: 25%;
-  padding: 5px 15px;
+    &__item {
+      flex-basis: 25%;
+      padding: 5px 15px;
+    }
+    &__item-name {
+      font-size: 25px;
+      color: green;
+      padding-top: 25px;
+    }
+    &__item-icon {
+      padding: 5px;
+    }
+    &__item-price {
+      font-size: 20px;
+    }
 }
 
 .l-products >.l-products__item {
@@ -46,20 +56,6 @@ li {
   list-style: none;
 }
 
-.l-products__item-name {
-  font-size: 25px;
-  color: green;
-  padding-top: 25px;
-}
-
-.l-products__item-icon {
-  padding: 5px;
-
-}
-
-.l-products__item-price {
-  font-size: 20px;
-}
 img {
   height: 335px;
   width: 335px;
