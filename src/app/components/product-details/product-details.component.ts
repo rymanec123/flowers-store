@@ -4,6 +4,14 @@ import { ActivatedRoute } from '@angular/router';
 import { products } from '@app/shared/mocks';
 import { CartService} from '@app/services/cart/cart.service';
 import { ProductDefinition } from '@app/shared/interfaces/product/product'
+import {ApiService} from '@app/services';
+import {ResDefinition} from '@app/shared/interfaces/product/res';
+
+interface ResDefinitionId {
+  id: number;
+  message: string;
+  content: any[];
+}
 
 @Component({
   selector: 'app-product-details',
@@ -11,13 +19,15 @@ import { ProductDefinition } from '@app/shared/interfaces/product/product'
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit {
-  myProducts: ProductDefinition[] = products;
+  myProducts: ProductDefinition[] = [];
   product: ProductDefinition = null;
 
   constructor(
-    private route: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
+    private apiService: ApiService,
     private cartService: CartService,
-  ) { }
+  ) {
+  }
 
   addToCart(product) {
     window.alert('Ваш продукт добавлен в корзину!');
@@ -25,9 +35,14 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-        this.product = products[+params.get('productId')];
+    this.activatedRoute.paramMap.subscribe(params => {
+      this.product = products[+params.get('productId')];
       console.log(this.product.img);
+
+      // this.apiService.getAllProducts().subscribe((res: ResDefinitionId) => {
+      //   console.log(res)
+      //   this.myProducts = res.content.id;
+      // });
     });
   }
 }

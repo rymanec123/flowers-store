@@ -1,8 +1,8 @@
 import {AfterViewInit, Component, Input, OnDestroy, OnInit, Output, EventEmitter} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { products } from '@app/shared/mocks/catalog.mock';
 import {ProductDefinition} from '@app/shared/interfaces';
 import {ApiService} from '@app/services';
+import {ResDefinition} from '@app/shared/interfaces/product/res';
 
 @Component({
   selector: 'app-product-list',
@@ -12,7 +12,7 @@ import {ApiService} from '@app/services';
 })
 
 export class ProductListComponent implements OnInit, OnDestroy, AfterViewInit {
-  myProducts: ProductDefinition[] = products;
+  myProducts: ProductDefinition[] = [];
   product: ProductDefinition = null;
 
   constructor(
@@ -22,7 +22,10 @@ export class ProductListComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit(): void {
     console.log('Компонет Каталог создался');
-    this.apiService.getAllProducts().subscribe(res=>console.log(res))
+    this.apiService.getAllProducts().subscribe((res: ResDefinition) => {
+      console.log(res)
+      this.myProducts=res.content;
+    })
   }
 
   ngOnDestroy() {
