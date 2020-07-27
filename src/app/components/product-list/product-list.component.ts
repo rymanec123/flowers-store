@@ -4,6 +4,12 @@ import {ProductDefinition} from '@app/shared/interfaces';
 import {ApiService} from '@app/services';
 import {ResDefinition} from '@app/shared/interfaces/product/res';
 
+// interface ResDefinition {
+//   code: number;
+//   message: string;
+//   content: any[];
+// }
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -24,7 +30,7 @@ export class ProductListComponent implements OnInit, OnDestroy, AfterViewInit {
     console.log('Компонет Каталог создался');
     this.apiService.getAllProducts().subscribe((res: ResDefinition) => {
       console.log(res)
-      this.myProducts=res.content;
+      this.myProducts = res.content;
     })
   }
 
