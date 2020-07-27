@@ -1,38 +1,40 @@
 section {
-    background-image: url('https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/shop-title-img.jpg');
-    height: 600px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    header {
-        position: relative;
-        padding: 25px;
-        color: #fff;
-        .header__item{
-            vertical-align: middle;
-        }
-        .header__item-nav {
-            text-align: right;
-            width: calc(100% - 107px);
-            vertical-align: middle;
-            display: inline-block;
-        }
-        h1 {
-          font-size: 15px;
-          color: white;
-        }
-        img {
-            vertical-align: middle;
-            height: 60px;
-        }
-        .l-navigator__link {
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        .l-navigator__item + .l-navigator__item {
-            padding-left: 40px;
-        }
+  background-image: url('https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/shop-title-img.jpg');
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .header {
+    position: relative;
+    padding: 25px;
+    color: #fff;
+    &__item{
+        vertical-align: middle;
     }
+    &__nav {
+        text-align: right;
+        width: calc(100% - 107px);
+        vertical-align: middle;
+        display: inline-block;
+    }
+    h1 {
+      font-size: 15px;
+      color: white;
+    }
+    img {
+        vertical-align: middle;
+        height: 60px;
+    }
+  }
+}
+.l-navigator {
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  &__item + &__item {
+    padding-left: 40px;
+  }
 }
 
 footer {
