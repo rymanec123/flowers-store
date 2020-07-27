@@ -1,24 +1,22 @@
-<body>
 <div class="container">
 
-<ul classs="parent">
-  <li class="children" *ngFor="let product of myProducts; index as productId" >
+<ul classs="l-products">
+  <li class="l-products__item" *ngFor="let product of myProducts; index as productId" >
 
-    <h3>
+    <h3 class="l-products__item-name">
       <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
         {{ product.name }}
       </a>
     </h3>
 
-    <h4 *ngIf="product.price">
+    <h4 class="l-products__item-price" *ngIf="product.price">
       Price: {{ product.price | currency }}
     </h4>
 
-    <p *ngIf="product.img">
+    <p class="l-products__item-icon" *ngIf="product.img">
       <img src="{{product.img}}">
     </p>
 
   </li>
 </ul>
 </div>
-</body>
