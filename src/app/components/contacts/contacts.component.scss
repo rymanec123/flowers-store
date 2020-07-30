@@ -36,10 +36,7 @@
 }
 
 .img {
-  width: 500px;
-  background-image: url("~assets/h2-gallery-img-1.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
+  max-width: 100%;
 }
 
 h1 {
@@ -58,12 +55,22 @@ p{
   .l-products {
     &__item {
       width: 50%;
+      //margin-left: 150px;
+      margin: 0 auto;
     }}
+  img {
+    max-width: 100%;
+  }
 }
 
 @include mobile() {
   .l-products {
     &__item {
       width: 100%;
+      //margin-left: 20px;
+      margin: 0 auto;
     }}
+  img {
+    max-width: 100%;
+  }
 }

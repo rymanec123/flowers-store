@@ -35,11 +35,7 @@ export class CartComponent implements OnInit, OnDestroy, AfterViewInit {
     console.log('Компонет Корзина создался');
   }
 
-  ngOnDestroy() {
-    console.log('Верстка Корзина подъехала');
-  }
+  ngOnDestroy() {}
 
-  ngAfterViewInit() {
-    console.log('Компонет Корзина  удалился');
-  }
+  ngAfterViewInit() {}
 }
