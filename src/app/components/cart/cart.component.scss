@@ -7,6 +7,40 @@
   background-image: url("~assets/h1-img-2.png");
   background-size: contain;
 }
+ img {
+   width: 150px;
+   height: 150px;
+ }
+
+.l-cart {
+  font-size: 0;
+  margin: 0 -15px;
+  &__item {
+    flex-basis: 25%;
+    padding: 5px 15px;
+  }
+  &__item-name {
+    font-size: 15px;
+    color: green;
+    padding-top: 25px;
+  }
+  &__item-icon {
+    padding: 5px;
+  }
+  &__item-price {
+    font-size: 20px;
+  }
+}
+
+.l-cart >.l-cart__item {
+  display: inline-block;
+  width: 25%;
+  padding: 0 15px;
+}
+
+li {
+  list-style: none;
+}
 
 a{
   font-size: 30px;
