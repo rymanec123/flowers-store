@@ -13,10 +13,16 @@
         type="text"
         name="telephone"
         formControlName="telephone"
-        placeholder="Ваш телефон"
+        placeholder="ваш телефон"
         matInput
       >
     </mat-form-field>
+    <mat-error *ngIf="signInForm.controls.telephone.hasError('pattern')">
+      Ошибка по регулярному выражению
+    </mat-error>
+    <mat-error *ngIf="signInForm.controls.telephone.hasError('required') && signInForm.controls.telephone.dirty">
+      поле не должно быть пустым
+    </mat-error>
 
     <mat-form-field class="f-default__row">
       <mat-label>Login</mat-label>
@@ -24,32 +30,13 @@
         type="text"
         name="login"
         formControlName="login"
-        placeholder="Ваш login"
+        placeholder="Ваше имя"
         matInput
       >
     </mat-form-field>
-
-    <mat-form-field class="f-default__row">
-      <mat-label>email</mat-label>
-      <input
-        type="email"
-        name="email"
-        formControlName="email"
-        placeholder="Ваш email"
-        matInput
-      >
-    </mat-form-field>
-
-    <mat-form-field class="f-default__row">
-      <mat-label>Рassword</mat-label>
-      <input
-        type="password"
-        name="pass"
-        formControlName="pass"
-        placeholder="Ваш пароль"
-        matInput
-      >
-    </mat-form-field>
+    <mat-error *ngIf="signInForm.controls.login.hasError('required') && signInForm.controls.login.dirty">
+      поле не должно быть пустым
+    </mat-error>
 
     <div class="f-default__actions">
       <button
@@ -57,8 +44,9 @@
         class="f-default__btn"
         mat-raised-button
         color="primary"
+        [disabled]="!this.signInForm.valid"
       >
-        Зарегистрироваться
+        Войти
       </button>
     </div>
   </form>

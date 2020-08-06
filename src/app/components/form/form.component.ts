@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UserService } from '@app/services/user/user.service';
 
 @Component({
   selector: 'app-form',
@@ -10,6 +11,7 @@ export class FormComponent implements OnInit {
   @Input()
   id: string;
   signInForm: FormGroup;
+  userService: UserService;
 
   constructor(
     private formBuilder: FormBuilder
@@ -17,13 +19,18 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.signInForm = this.formBuilder.group({
-      login: [null],
-      pass: [null]
+      telephone: [null, [Validators.required, Validators.pattern(/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/)]],
+      login: [null, [Validators.required]]
     });
   }
 
   onSignInSubmit(event: Event) {
     event.preventDefault();
+
+    if(!this.signInForm.valid) {
+      return;
+    }
+     this.userService.user.next({login: this.signInForm.value.login})
 
     console.log(this.signInForm.value);
   }
