@@ -1,5 +1,9 @@
 @import 'src/scss/abstracts/mixins';
 
+section {
+  position: relative;
+}
+
 .header {
   position: absolute;
   padding: 25px;
