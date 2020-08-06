@@ -20,7 +20,7 @@
     <mat-error *ngIf="signInForm.controls.telephone.hasError('pattern')">
       Ошибка по регулярному выражению
     </mat-error>
-    <mat-error *ngIf="signInForm.controls.telephone.hasError('required') && signInForm.controls.telephone.dirty">
+    <mat-error *ngIf="signInForm.controls.telephone.hasError('required') && signInForm.controls.telephone.dirty  && signInForm.controls.telephone.touched">
       поле не должно быть пустым
     </mat-error>
 
@@ -34,7 +34,7 @@
         matInput
       >
     </mat-form-field>
-    <mat-error *ngIf="signInForm.controls.login.hasError('required') && signInForm.controls.login.dirty">
+    <mat-error *ngIf="signInForm.controls.login.hasError('required') && signInForm.controls.login.dirty && signInForm.controls.login.touched">
       поле не должно быть пустым
     </mat-error>
 
