@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { UserService } from '@app/services/user/user.service';
+// import { UserService } from '@app/services/user/user.service';
 
 @Component({
   selector: 'app-form',
@@ -11,7 +11,7 @@ export class FormComponent implements OnInit {
   @Input()
   id: string;
   signInForm: FormGroup;
-  userService: UserService;
+  // userService: UserService;
 
   constructor(
     private formBuilder: FormBuilder
@@ -30,7 +30,7 @@ export class FormComponent implements OnInit {
     if(!this.signInForm.valid) {
       return;
     }
-     this.userService.user.next({login: this.signInForm.value.login})
+    //  this.userService.user.next({login: this.signInForm.value.login})
 
     console.log(this.signInForm.value);
   }
