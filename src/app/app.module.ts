@@ -34,7 +34,7 @@ import { MatInputModule } from '@angular/material/input';
     FormsModule,
     HttpClientModule,
     MatInputModule,
-    RouterModule
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

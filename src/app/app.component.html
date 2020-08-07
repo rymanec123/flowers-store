@@ -9,6 +9,7 @@
         <li class="l-navigator__item"><a class="l-navigator__link" href="#" routerLink="contacts">Контакты</a></li>
         <li class="l-navigator__item"><a *ngIf="!(this.userService.user | async)" class="l-navigator__link" href="#" routerLink="cart">Корзина</a><a *ngIf="this.userService.user" class="l-navigator__link" href="#" routerLink="cart">{{userService.name}}</a></li>
         <li class="l-navigator__item"><a *ngIf="!(this.userService.user | async)" class="l-navigator__link" href="#" routerLink="form">Вход</a></li>
+
       </ul>
     </nav>
     <p>{{takingOrders}}</p>
