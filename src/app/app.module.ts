@@ -13,7 +13,7 @@ import { DeliveryComponent } from '@app/components/delivery/delivery.component';
 import { ProductListComponent } from '@app/components/product-list/product-list.component';
 import { ProductDetailsComponent } from '@app/components/product-details/product-details.component';
 import { FormComponent } from '@app/components/form/form.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -33,8 +33,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    MatFormFieldModule,
-    RouterModule
+    MatInputModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

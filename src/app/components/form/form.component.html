@@ -16,13 +16,14 @@
         placeholder="ваш телефон"
         matInput
       >
+      <mat-error *ngIf="signInForm.controls.telephone.hasError('pattern')">
+        Неправильный формат номера
+      </mat-error>
+      <mat-error *ngIf="signInForm.controls.telephone.hasError('required') && signInForm.controls.telephone.dirty  && signInForm.controls.telephone.touched">
+        поле не должно быть пустым
+      </mat-error>
     </mat-form-field>
-    <mat-error *ngIf="signInForm.controls.telephone.hasError('pattern')">
-      Ошибка по регулярному выражению
-    </mat-error>
-    <mat-error *ngIf="signInForm.controls.telephone.hasError('required') && signInForm.controls.telephone.dirty  && signInForm.controls.telephone.touched">
-      поле не должно быть пустым
-    </mat-error>
+
 
     <mat-form-field class="f-default__row">
       <mat-label>Login</mat-label>
@@ -33,10 +34,10 @@
         placeholder="Ваше имя"
         matInput
       >
+      <mat-error *ngIf="signInForm.controls.login.hasError('required') && signInForm.controls.login.dirty && signInForm.controls.login.touched">
+        поле не должно быть пустым
+      </mat-error>
     </mat-form-field>
-    <mat-error *ngIf="signInForm.controls.login.hasError('required') && signInForm.controls.login.dirty && signInForm.controls.login.touched">
-      поле не должно быть пустым
-    </mat-error>
 
     <div class="f-default__actions">
       <button
