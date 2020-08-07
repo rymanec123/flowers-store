@@ -36,11 +36,11 @@
       <input
         type="text"
         name="login"
-        formControlName="login"
+        formControlName="telephone"
         placeholder="Ваш телефон"
         matInput
       >
-      <mat-error *ngIf="checkoutForm.controls.login.hasError('required')">
+      <mat-error *ngIf="checkoutForm.controls.telephone.hasError('required')">
         Поле не должно быть пустым
       </mat-error>
     </mat-form-field>
