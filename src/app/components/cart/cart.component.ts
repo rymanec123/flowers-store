@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { CartService } from '@app/services/cart/cart.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
-// import { MatInputModule } from "@angular/material/input";
+import { Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-cart',
@@ -11,19 +11,25 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 
 export class CartComponent implements OnInit, OnDestroy, AfterViewInit {
   items;
-  checkoutForm;
+  checkoutForm: FormGroup;
   id: string;
 
   constructor(
     private cartService: CartService,
     private formBuilder: FormBuilder,
-    // private matInputModule,
+
   ) {
     this.items = this.cartService.getItems();
     this.checkoutForm = this.formBuilder.group({
-      name: '',
-      login: '',
-      address: '',
+      name: [null, [
+        Validators.required,
+      ]],
+      login: [null, [
+        Validators.required,
+      ]],
+      address: [null, [
+        Validators.required,
+      ]],
     });
   }
 

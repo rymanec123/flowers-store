@@ -18,7 +18,7 @@
 
     <label class="label">Заказчик</label>
     <mat-form-field class="f-default__row">
-      <mat-label>Заказчик</mat-label>
+      <mat-label>Имя</mat-label>
       <input
         type="text"
         name="name"
@@ -26,6 +26,9 @@
         placeholder="Ваше имя"
         matInput
       >
+      <mat-error *ngIf="checkoutForm.controls.name.hasError('required')">
+        Поле не должно быть пустым
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field class="f-default__row">
@@ -37,6 +40,9 @@
         placeholder="Ваш телефон"
         matInput
       >
+      <mat-error *ngIf="checkoutForm.controls.login.hasError('required')">
+        Поле не должно быть пустым
+      </mat-error>
     </mat-form-field>
 
     <label class="label">Адрес доставки</label>
@@ -49,8 +55,16 @@
         placeholder="Ваш адрес"
         matInput
       >
+      <mat-error *ngIf="checkoutForm.controls.address.hasError('required')">
+        Поле не должно быть пустым
+      </mat-error>
     </mat-form-field>
 
-      <button class="button" type="submit">Покупка</button>
+      <button class="button"
+              type="submit"
+              [disabled]="!this.checkoutForm.valid"
+      >
+        Покупка
+      </button>
   </form>
 </div>
