@@ -13,7 +13,7 @@ import { DeliveryComponent } from '@app/components/delivery/delivery.component';
 import { ProductListComponent } from '@app/components/product-list/product-list.component';
 import { ProductDetailsComponent } from '@app/components/product-details/product-details.component';
 import { FormComponent } from '@app/components/form/form.component';
-import { MatInputModule} from "@angular/material/input";
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { MatInputModule} from "@angular/material/input";
     FormsModule,
     HttpClientModule,
     MatInputModule,
-    RouterModule
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

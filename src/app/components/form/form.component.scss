@@ -18,7 +18,7 @@
 
   &__row {
     width: 100%;
-    border: 1px solid olivedrab;
+    // border: 1px solid olivedrab;
 
     & + & {
       margin-top: 20px;
@@ -29,6 +29,7 @@
     margin-top: 20px;
     text-align: center;
     border: 1px solid olivedrab;
+    border-radius: 4px;
   }
 }
 
