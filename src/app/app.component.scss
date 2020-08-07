@@ -1,5 +1,8 @@
 @import 'src/scss/abstracts/mixins';
 
+section {
+  position: relative;
+}
 
 .header {
   position: absolute;
@@ -123,8 +126,7 @@ a {
       transform: translate(-50%, -50%);
     }
     &__item + &__item {
-      padding: 0; 
-    }    
+      padding: 0;
+    }
   }
 }
-
