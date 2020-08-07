@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, Injectable, OnDestroy, OnInit} from '@angular/core';
 import {CartService} from '@app/services/cart/cart.service';
 import { FormBuilder } from '@angular/forms';
+import { UserService } from '@app/services/user/user.service';
 
 @Component({
   selector: 'app-cart',
@@ -15,13 +16,17 @@ export class CartComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(
     private cartService: CartService,
     private formBuilder: FormBuilder,
+    public userService: UserService
   ) {
     this.items = this.cartService.getItems();
     this.checkoutForm = this.formBuilder.group({
-      name: '',
+      name: this.userService.name,
+      telephone : this.userService.telephone,
       address: ''
     });
   }
+
+  
 
   onSubmit(customerData) {
 
@@ -33,6 +38,9 @@ export class CartComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit(): void {
     console.log('Компонет Корзина создался');
+    this.userService.user.subscribe(
+      res => console.log(res)
+    )
   }
 
   ngOnDestroy() {}

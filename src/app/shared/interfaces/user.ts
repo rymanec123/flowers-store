@@ -1,7 +1,7 @@
 interface UserNameDefnition {
 
   name: string;
-  telephine: string;
+  telephone: string;
 }
 
 

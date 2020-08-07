@@ -36,6 +36,7 @@ export class FormComponent implements OnInit, OnDestroy  {
     }
      this.userService.user.next({login: this.signInForm.value.login})
      this.userService.name = this.signInForm.value.login;
+     this.userService.telephone = this.signInForm.value.telephone;
 
     console.log(this.signInForm.value);
   }
