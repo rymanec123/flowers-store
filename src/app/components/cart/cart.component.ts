@@ -52,7 +52,6 @@ export class CartComponent implements OnInit, OnDestroy, AfterViewInit {
     )
   }
 
-  ngOnInit() {}
 
   ngOnDestroy() {}
 
